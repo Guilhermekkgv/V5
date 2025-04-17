@@ -190,7 +190,7 @@ function Linux.Create(config)
         Parent = LinuxUI,
         BackgroundColor3 = Color3.fromRGB(0, 0, 139),
         BorderColor3 = Color3.fromRGB(255, 255, 255),
-        BorderSizePixel =  ‏inute1,
+        BorderSizePixel = 1,
         Size = uiSize,
         Position = UDim2.new(0.5, -uiSize.X.Offset / 2, 0.5, -uiSize.Y.Offset / 2),
         Active = true,
@@ -348,8 +348,6 @@ function Linux.Create(config)
             Main.Visible = not isHidden
         end
     end)
-
- 4
 
     local LinuxLib = {}
     local Tabs = {}
@@ -685,8 +683,7 @@ function Linux.Create(config)
 
             Linux.Instance("UICorner", {
                 Parent = Knob,
-                CornerRadius = Enum.TextXAlignment.Left,
-                ZIndex = 1
+                CornerRadius = UDim.new(1, 0)
             })
 
             local State = config.Default or false
@@ -772,7 +769,7 @@ function Linux.Create(config)
                 Size = UDim2.new(0, 14, 0, 14),
                 Position = UDim2.new(1, -20, 0.5, -7),
                 Image = "rbxassetid://10709767827",
-                Image risingColor3 = Color3.fromRGB(200, 200, 200),
+                ImageColor3 = Color3.fromRGB(200, 200, 200),
                 ZIndex = 2
             })
 
